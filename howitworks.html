@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="description" content="YNOT: The premium wardrobe resale service. Turn your pre-loved fashion into cash with our seamless collection and selling process.">
+<meta charset="UTF-8">
+<link class="icon" type="image/jpeg" href="assets/favicon.jpeg">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How It Works - YNOT Wardrobe</title>
+<link rel="icon" type="image/jpeg" href="assets/favicon.jpeg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&family=Playfair+Display+SC:wght@400&display=swap" rel="stylesheet">
+
+<style>
+/* MONOCHROME EDITORIAL RESET */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+  background: #FDFBF7; /* Warm off-white backdrop */
+  color: #000000;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, .brand-heading {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 400;
+  color: #000000;
+}
+
+.script-accent {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-style: italic;
+  color: #C29B78; /* Soft golden-tan script signature color */
+}
+
+/* TOP NOTIFICATION BANNER */
+.top-banner {
+  background: #C29B78;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 10px 20px;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 1001;
+}
+
+/* SOLID WHITE NAVIGATION HEADER WITH LOGO IMAGE */
+header {
+  position: relative;
+  width: 100%;
+  padding: 15px 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+  background: #FFFFFF; 
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.nav-logo-img {
+  height: 45px; /* Clean, balanced size for the navigation bar */
+  width: auto;
+  display: block;
+}
+
+.logo-area .brand-title {
+  font-family: 'Playfair Display SC', Georgia, serif;
+  font-size: 24px;
+  color: #000000; 
+  letter-spacing: 1px;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+  list-style: none; /* Reset for dropdown ul list structuring */
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #000000; 
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  transition: opacity 0.2s ease;
+}
+
+.nav-menu a:hover {
+  opacity: 0.6;
+}
+
+/* DROPDOWN ARCHITECTURE RULES */
+.dropdown-item {
+  position: relative;
+}
+
+.dropdown-item > a {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+/* Elegant CSS chevron down indicator */
+.dropdown-item > a::after {
+  content: '';
+  border: solid #000000;
+  border-width: 0 1px 1px 0;
+  display: inline-block;
+  padding: 2.5px;
+  transform: rotate(45deg);
+  margin-top: -3px;
+  transition: transform 0.2s ease;
+}
+
+.dropdown-item:hover > a::after {
+  transform: rotate(-135deg);
+  margin-top: 2px;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #FFFFFF;
+  min-width: 160px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  border-radius: 4px;
+  padding: 10px 0;
+  list-style: none;
+  z-index: 1010;
+  margin-top: 10px;
+}
+
+/* Small invisible bridge to maintain hover target state seamlessly */
+.submenu::before {
+  content: '';
+  position: absolute;
+  top: -15px;
+  left: 0;
+  width: 100%;
+  height: 15px;
+}
+
+.dropdown-item:hover .submenu {
+  display: block;
+}
+
+.submenu li {
+  width: 100%;
+}
+
+.submenu a {
+  display: block;
+  padding: 10px 20px;
+  font-size: 10px;
+  letter-spacing: 1px;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.submenu a:hover {
+  background: #FDFBF7;
+  opacity: 1;
+  color: #C29B78;
+}
+
+.cta-nav-btn {
+  background: #C29B78 !important; 
+  color: #FFFFFF !important;
+  padding: 12px 24px !important;
+  font-size: 11px !important;
+  letter-spacing: 1.5px !important;
+  text-transform: uppercase;
+}
+
+/* TRUE EDGE-TO-EDGE FULL WIDTH HERO BANNERS */
+.page-hero {
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  min-height: 400px;
+  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('C:/WhyKnot/assets/howitworks1.jpg') center center / cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0;
+  padding: 0 20px;
+}
+
+.page-hero h1 {
+  color: #FFFFFF;
+  font-size: 52px;
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+  text-shadow: 0 3px 20px rgba(0,0,0,0.5);
+}
+
+.page-hero p {
+  font-size: 16px;
+  color: #F4F1EA;
+  letter-spacing: 1.2px;
+  max-width: 650px;
+  margin: 0 auto;
+  line-height: 1.5;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.4);
+}
+
+/* THE SIGNATURE WAVE SEPARATOR DESIGN ELEMENT */
+.wave-divider-wrap {
+  position: relative;
+  margin-top: -85px;
+  z-index: 20;
+  width: 100%;
+  line-height: 0;
+}
+
+.wave-divider-wrap svg.wave-graphic {
+  width: 100%;
+  height: 85px;
+  display: block;
+}
+
+.bow-center-badge {
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 30;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bow-center-badge img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 1.5px solid #FFFFFF;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.bow-center-badge.badge-tan img {
+  background-color: #C29B78;
+}
+
+.bow-center-badge.badge-dark img {
+  background-color: #000000;
+  border-color: #C29B78;
+}
+
+.bow-center-badge.badge-light img {
+  background-color: #FFFFFF;
+  border-color: #C29B78;
+}
+
+/* STEP BY STEP PROCESS TIMELINE (WOODEN BACKGROUND) */
+.timeline-section {
+  position: relative;
+  background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('assets/woodenbackdrop.jpg') center center / cover no-repeat;
+  padding: 100px 60px 80px 60px;
+  color: #FFFFFF;
+}
+
+.timeline-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.timeline-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 80px;
+  gap: 60px;
+}
+
+.timeline-row:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-row:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.timeline-image-frame {
+  flex: 1;
+  background: #FFFFFF;
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-height: 380px;
+}
+
+.timeline-image-frame img {
+  width: 100%;
+  height: auto;
+  max-height: 340px;
+  object-fit: contain;
+}
+
+.timeline-text-block {
+  flex: 1;
+}
+
+.step-number {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 64px;
+  color: #C29B78;
+  line-height: 1;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.timeline-text-block h3 {
+  font-size: 28px;
+  color: #FFFFFF;
+  margin-bottom: 16px;
+  font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.timeline-text-block p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #E2DDD5;
+}
+
+/* CALL TO ACTION ACCENT BANNER */
+.cta-banner-section {
+  background: #FDFBF7;
+  padding: 100px 60px 80px 60px;
+  border: none !important;
+  text-align: center;
+}
+
+.cta-heading-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  max-width: 950px;
+  margin: 0 auto 20px auto;
+}
+
+.cta-banner-section h2 {
+  font-size: 36px;
+  margin-bottom: 0; 
+  line-height: 1.2;
+}
+
+.cta-accent-logo {
+  height: 45px; 
+  width: auto;
+  display: block;
+}
+
+.cta-banner-section p {
+  font-size: 15px;
+  color: #444444;
+  margin-bottom: 30px;
+}
+
+.dark-action-btn {
+  background: #000000;
+  color: #FFFFFF;
+  padding: 15px 40px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.2s ease;
+}
+
+.dark-action-btn:hover {
+  background: #C29B78;
+}
+
+/* FOOTER RUNWAY */
+footer {
+  background: #000000;
+  color: #FFFFFF;
+  padding: 40px 60px;
+  border-top: none; /* Straight boundary line line removed to let the wave act as the clean divider */
+}
+
+.footer-inner {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  text-align: center;
+}
+
+.footer-metric-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  border-right: 1px solid #222222;
+}
+
+.footer-metric-block:last-child {
+  border-right: none;
+}
+
+.footer-metric-block svg {
+  width: 18px;
+  height: auto;
+  fill: none;
+  stroke: #FFFFFF;
+  stroke-width: 1.5;
+}
+</style>
+</head>
+<body>
+
+<div class="top-banner">
+  Free premium home collections available this week &mdash; book your slot now
+</div>
+
+<header>
+  <div class="logo-area">
+    <img src="assets/Beth 5.jpeg" alt="YNOT Logo" class="nav-logo-img">
+  </div>
+  <ul class="nav-menu">
+    <li><a href="Home.html">Home</a></li>
+    <li><a href="HowItWorks.html">How It Works</a></li>
+    <li><a href="SellWithUs.html">Sell With Us</a></li>
+    <li><a href="Shop.html">Shop</a></li>
+    
+    <li class="dropdown-item">
+      <a>Work With Us</a>
+      <ul class="submenu">
+        <li><a href="Partner.html">Partner</a></li>
+        <li><a href="Franchise.html">Franchisee</a></li>
+        <li><a href="Influencer.html">Influencer</a></li>
+      </ul>
+    </li>
+    
+    <li><a class="cta-nav-btn" href="Contact.html">Contact Us</a></li>
+  </ul>
+</header>
+
+<main>
+
+  <section class="page-hero">
+    <h1>Your Wardrobe, Handled.</h1>
+    <p>A simple, luxury concierge service designed to clear your space, curate your fashion legacy, and reward your style investments.</p>
+  </section>
+
+  <div class="wave-divider-wrap">
+    <svg class="wave-graphic" viewBox="0 0 1440 85" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,40 C480,95 960,-15 1440,40 L1440,85 L0,85 Z" fill="rgba(0,0,0,0.45)"/>
+    </svg>
+    <div class="bow-center-badge badge-tan">
+      <img src="C:\WhyKnot\assets\bow.jpeg" alt="YNOT Bow Element">
+    </div>
+  </div>
+
+  <section class="timeline-section">
+    <div class="timeline-container">
+      
+      <div class="timeline-row">
+        <div class="timeline-image-frame">
+          <img src="assets/takeimages.jpg" alt="Collection Process">
+        </div>
+        <div class="timeline-text-block">
+          <span class="step-number">01</span>
+          <h3>We Book & Collect</h3>
+          <p>Schedule your free luxury home collection. Our specialist team arrives at your door to review, carefully log, and transport your high-quality, pre-loved garments and accessories straight to our studio.</p>
+        </div>
+      </div>
+
+      <div class="timeline-row">
+        <div class="timeline-image-frame">
+          <img src="assets/wesell.jpg" alt="Cataloguing and Sales Process">
+        </div>
+        <div class="timeline-text-block">
+          <span class="step-number">02</span>
+          <h3>We Authenticate & Sell</h3>
+          <p>Every piece is authenticated, deep cleaned, and professionally captured in our editorial photography bay. We handle complete cataloguing, targeted digital pricing strategies, and secure marketing to our verified luxury buyers.</p>
+        </div>
+      </div>
+
+      <div class="timeline-row">
+        <div class="timeline-image-frame">
+          <img src="assets/payyou.jpg" alt="Payout Process">
+        </div>
+        <div class="timeline-text-block">
+          <span class="step-number">03</span>
+          <h3>You Receive Payouts</h3>
+          <p>Once your items find their next homes, the earnings are seamlessly deposited straight into your bank account. No managing messages, zero shipping stress, and a cleaner wardrobe built on true circularity.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="wave-divider-wrap">
+    <svg class="wave-graphic" viewBox="0 0 1440 85" preserveAspectRatio="none" fill="none" style="border: none !important;" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,40 C480,-15 960,95 1440,40 L1440,85 L0,85 Z" fill="#FDFBF7"/>
+    </svg>
+    <div class="bow-center-badge badge-dark">
+      <img src="C:\WhyKnot\assets\bow.jpeg" alt="YNOT Bow Element">
+    </div>
+  </div>
+
+  <section class="cta-banner-section">
+    <div class="cta-heading-container">
+      <img src="assets/Beth 5.jpeg" alt="YNOT Logo Left" class="cta-accent-logo">
+      <h2>Ready to transform your wardrobe?</h2>
+      <img src="assets/Beth 5.jpeg" alt="YNOT Logo Right" class="cta-accent-logo">
+    </div>
+    
+    <p>Spaces fill up fast. Book your personalised luxury home collection window today.</p>
+    <a href="Contact.html" class="dark-action-btn">Book a Collection Now</a>
+  </section>
+
+  <div class="wave-divider-wrap">
+    <svg class="wave-graphic" viewBox="0 0 1440 85" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,40 C480,95 960,-15 1440,40 L1440,85 L0,85 Z" fill="#000000"/>
+    </svg>
+    <div class="bow-center-badge badge-light">
+      <img src="C:\WhyKnot\assets\bow.jpeg" alt="YNOT Bow Element">
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <!-- Existing Metric Blocks -->
+  <div class="footer-inner" style="border-bottom: 1px solid #222; padding-bottom: 30px; margin-bottom: 30px;">
+    <div class="footer-metric-block">Trusted by thousands</div>
+    <div class="footer-metric-block">Sustainable by design</div>
+    <div class="footer-metric-block">Secure & hassle-free</div>
+    <div class="footer-metric-block" style="border-right: none;">Real people. Real impact.</div>
+  </div>
+
+  <!-- New Legal Links -->
+  <div style="text-align: center; margin-bottom: 20px;">
+    <a href="cookie-policy.html" style="color: #b49f54; text-decoration: none; font-size: 10px; text-transform: uppercase; letter-spacing: 1.5px; margin: 0 15px;">Cookie Policy</a>
+    <a href="terms-and-conditions.html" style="color: #b49f54; text-decoration: none; font-size: 10px; text-transform: uppercase; letter-spacing: 1.5px; margin: 0 15px;">Terms & Conditions</a>
+    <a href="gdpr-statement.html" style="color: #b49f54; text-decoration: none; font-size: 10px; text-transform: uppercase; letter-spacing: 1.5px; margin: 0 15px;">GDPR Statement</a>
+  </div>
+    <!-- Powered By Branding -->
+  <div style="text-align: center; font-size: 9px; color: #444; text-transform: uppercase; letter-spacing: 2px;">
+    POWERED BY <span style="color: #C29B78;">POWERED BY THE ORGANISED TYPES</span>
+  </div>
+  </footer>
+
+</body>
+</html>

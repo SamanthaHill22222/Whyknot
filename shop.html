@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" type="image/jpeg" href="assets/favicon.jpeg">
+    <meta name="description" content="YNOT: The premium wardrobe resale service. Turn your pre-loved fashion into cash with our seamless collection and selling process.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shop | WhyKnot Wardrobe</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&family=Playfair+Display+SC:wght@400&display=swap" rel="stylesheet">
+
+<style>
+/* --- CORE BRAND STYLES --- */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Plus Jakarta Sans', Arial, sans-serif; background: #FDFBF7; color: #000000; -webkit-font-smoothing: antialiased; }
+h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; font-weight: 400; color: #000000; }
+.script-accent { font-family: 'Playfair Display', Georgia, serif; font-style: italic; color: #C29B78; }
+
+/* ANNOUNCEMENT BANNER */
+.top-banner { background: #C29B78; color: #FFFFFF; text-align: center; padding: 10px 20px; font-size: 11px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; }
+
+/* NAV BAR */
+header { display: flex; align-items: center; justify-content: space-between; padding: 15px 60px; background: #FFFFFF; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); }
+.logo-area img { height: 45px; }
+.nav-menu { display: flex; gap: 28px; list-style: none; align-items: center; }
+.nav-menu a { text-decoration: none; color: #000000; font-size: 11px; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase; cursor: pointer; }
+.dropdown-item { position: relative; }
+.submenu { display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); background: #FFFFFF; min-width: 160px; box-shadow: 0 8px 25px rgba(0,0,0,0.08); padding: 10px 0; z-index: 1010; list-style: none; }
+.dropdown-item:hover .submenu { display: block; }
+.submenu a { display: block; padding: 10px 20px; font-size: 10px; text-align: center; }
+.cta-nav-btn { background: #C29B78 !important; color: #FFFFFF !important; padding: 12px 24px !important; }
+
+/* HERO SECTION */
+.hero-section { position: relative; height: 50vh; min-height: 400px; background: url('assets/collaboration.jpg') center center / cover no-repeat; display: flex; align-items: center; padding: 0 80px; color: #FFFFFF; }
+.hero-section::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.35); }
+.hero-content { position: relative; z-index: 10; max-width: 650px; }
+.hero-content h1 { color: #FFFFFF; font-size: 64px; line-height: 1.1; margin-bottom: 24px; }
+
+/* WAVE DIVIDER */
+.wave-divider-wrap { position: relative; margin-top: -85px; z-index: 20; width: 100%; line-height: 0; }
+.wave-graphic { width: 100%; height: 85px; display: block; }
+
+/* SHOP PLATFORMS SECTION */
+.shop-section { padding: 80px; text-align: center; max-width: 1000px; margin: 0 auto; }
+.platform-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 50px; }
+.platform-card { padding: 40px; border: 1px solid #E2DDD5; background: #FFFFFF; }
+.platform-logo { height: 50px; margin-bottom: 20px; object-fit: contain; }
+.platform-link { display: inline-block; padding: 12px 25px; background: #000000; color: #FFFFFF; text-decoration: none; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; margin-top: 20px; }
+
+/* FOOTER */
+footer { background: #000000; color: #FFFFFF; padding: 40px 60px; border-top: 1px solid #111111; }
+.footer-inner { display: grid; grid-template-columns: repeat(4, 1fr); align-items: center; text-align: center; }
+.footer-metric-block { font-size: 12px; letter-spacing: 1px; text-transform: uppercase; border-right: 1px solid #222222; }
+</style>
+</head>
+<body>
+
+<div class="top-banner">Free premium home collections available this week — book your slot now</div>
+
+<header>
+  <div class="logo-area"><img src="assets/Beth 5.jpeg" alt="YNOT Logo"></div>
+  <ul class="nav-menu">
+    <li><a href="home.html">Home</a></li>
+    <li><a href="howitworks.html">How It Works</a></li>
+    <li><a href="sellwithus.html">Sell With Us</a></li>
+    <li><a href="shop.html">Shop</a></li>
+    <li class="dropdown-item">
+      <a>Work With Us ▾</a>
+      <ul class="submenu">
+        <li><a href="Partner.html">Partner</a></li>
+        <li><a href="Franchise.html">Franchisee</a></li>
+        <li><a href="Influencer.html">Influencer</a></li>
+      </ul>
+    </li>
+    <li><a class="cta-nav-btn" href="contact.html">Contact Us</a></li>
+  </ul>
+</header>
+
+<main>
+  <section class="hero-section">
+    <div class="hero-content">
+      <span class="script-accent">The Edit</span>
+      <h1>Shop WhyKnot.</h1>
+      <p>Curated preloved fashion. Find your next signature piece.</p>
+    </div>
+  </section>
+
+  <div class="wave-divider-wrap">
+    <svg class="wave-graphic" viewBox="0 0 1440 120" preserveAspectRatio="none"><path d="M0,40 C480,105 960,15 1440,60 L1440,120 L0,120 Z" fill="#FDFBF7"></path></svg>
+  </div>
+
+  <section class="shop-section">
+    <h2>Our Official Shop Is Coming Soon</h2>
+    <p style="margin-top: 20px; color: #666;">While we build our native platform, explore our curated collections via our trusted partners below.</p>
+
+    <div class="platform-grid">
+      <!-- Vinted -->
+      <div class="platform-card">
+        <img src="assets/logo-vinted.jpg" alt="Vinted" class="platform-logo">
+        <h3>Vinted</h3>
+        <a href="https://www.vinted.co.uk/member/101623287-bethjessamyn" target="_blank" class="platform-link">Shop Vinted</a>
+      </div>
+      <!-- Depop -->
+      <div class="platform-card">
+        <img src="assets/depop logo.webp" alt="Depop" class="platform-logo">
+        <h3>Depop</h3>
+        <a href="https://depop.app.link/BpsLi7lwc4b" target="_blank" class="platform-link">Shop Depop</a>
+      </div>
+      <!-- Whatnot -->
+      <div class="platform-card">
+        <img src="assets/whatnot-logo-png_seeklogo-542521.png" alt="Whatnot" class="platform-logo">
+        <h3>Whatnot</h3>
+        <a href="https://www.whatnot.com/s/JwciuNBl" target="_blank" class="platform-link">Shop Whatnot</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <!-- Existing Metric Blocks -->
+  <div class="footer-inner" style="border-bottom: 1px solid #222; padding-bottom: 30px; margin-bottom: 30px;">
+    <div class="footer-metric-block">Trusted by thousands</div>
+    <div class="footer-metric-block">Sustainable by design</div>
+    <div class="footer-metric-block">Secure & hassle-free</div>
+    <div class="footer-metric-block" style="border-right: none;">Real people. Real impact.</div>
+  </div>
+
+  <!-- New Legal Links -->
+  <div style="text-align: center; margin-bottom: 20px;">
+    <a href="cookie-policy.html" style="color: #b49f54; text-decoration: none; font-size: 10px; text-transform: uppercase; letter-spacing: 1.5px; margin: 0 15px;">Cookie Policy</a>
+    <a href="terms-and-conditions.html" style="color: #b49f54; text-decoration: none; font-size: 10px; text-transform: uppercase; letter-spacing: 1.5px; margin: 0 15px;">Terms & Conditions</a>
+    <a href="gdpr-statement.html" style="color: #b49f54; text-decoration: none; font-size: 10px; text-transform: uppercase; letter-spacing: 1.5px; margin: 0 15px;">GDPR Statement</a>
+  </div>
+    <!-- Powered By Branding -->
+  <div style="text-align: center; font-size: 9px; color: #444; text-transform: uppercase; letter-spacing: 2px;">
+    POWERED BY <span style="color: #C29B78;">POWERED BY THE ORGANISED TYPES</span>
+  </div>
+  </footer>
+
+</body>
+</html>
